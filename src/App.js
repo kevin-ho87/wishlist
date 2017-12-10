@@ -23,20 +23,7 @@ class App extends Component {
 
     const savedCards = this.state.saved.map((item) => {
       return (
-        <div className="card" key={item.id}>
-          <header className="card__header" style={{backgroundColor: item.agency.brandingColors.primary}}>
-            <img src={item.agency.logo} alt=""/>
-          </header>
-          <div className="card__thumb">
-            <img src={item.mainImage} alt=""/>
-          </div>
-          <footer className="card__footer">
-            <p>Price: {item.price}</p>
-          </footer>
-          <div className="card__overlay">
-            <button className="btn btn_remove" type="button">Remove property</button>
-          </div>
-        </div>
+        <Card key={item.id} data={item} />
       );
     });
 

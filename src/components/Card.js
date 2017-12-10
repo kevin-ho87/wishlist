@@ -17,6 +17,7 @@ class Card extends Component {
         </footer>
         <div className="card__overlay">
           <button className="btn btn_add" type="button">Add property</button>
+          {/* <button className="btn btn_remove" type="button">Remove property</button> */}
         </div>
       </div>
     );

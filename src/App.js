@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import './css/App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    const { results, saved } = this.props.data;
+
+    this.state = {
+      results,
+      saved
+    }
+  }
+
   render() {
     return (
       <div className="container">

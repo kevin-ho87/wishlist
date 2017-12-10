@@ -17,13 +17,13 @@ class App extends Component {
   render() {
     const resultsCards = this.state.results.map((item) => {
       return (
-        <Card key={item.id} data={item} />
+        <Card key={item.id} data={item} type={'add'} />
       );
     });
 
     const savedCards = this.state.saved.map((item) => {
       return (
-        <Card key={item.id} data={item} />
+        <Card key={item.id} data={item} type={'remove'} />
       );
     });
 

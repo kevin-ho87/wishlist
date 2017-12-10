@@ -3,6 +3,14 @@ import React, { Component } from 'react';
 class Card extends Component {
   render() {
     const { agency, mainImage, price } = this.props.data;
+    const { type } = this.props;
+
+    let button = null;
+    if (type === 'add') {
+      button = <button className="btn btn_add" type="button">Add property</button>;
+    } else if (type === 'remove') {
+      button = <button className="btn btn_remove" type="button">Remove property</button>;
+    }
 
     return (
       <div className="card">
@@ -16,8 +24,7 @@ class Card extends Component {
           <p>Price: {price}</p>
         </footer>
         <div className="card__overlay">
-          <button className="btn btn_add" type="button">Add property</button>
-          {/* <button className="btn btn_remove" type="button">Remove property</button> */}
+          {button}
         </div>
       </div>
     );

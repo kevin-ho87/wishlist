@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './components/Card'
 import './css/App.css';
 
 class App extends Component {
@@ -16,20 +17,7 @@ class App extends Component {
   render() {
     const resultsCards = this.state.results.map((item) => {
       return (
-        <div className="card" key={item.id}>
-          <header className="card__header" style={{backgroundColor: item.agency.brandingColors.primary}}>
-            <img src={item.agency.logo} alt=""/>
-          </header>
-          <div className="card__thumb">
-            <img src={item.mainImage} alt=""/>
-          </div>
-          <footer className="card__footer">
-            <p>Price: {item.price}</p>
-          </footer>
-          <div className="card__overlay">
-            <button className="btn btn_add" type="button">Add property</button>
-          </div>
-        </div>
+        <Card key={item.id} data={item} />
       );
     });
 

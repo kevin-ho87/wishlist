@@ -18,10 +18,15 @@ class App extends Component {
   }
 
   handleAddProperty(data, type) {
-    // console.log('handle click from App, to add', data, type);
-    this.setState({
-      saved: [...this.state.saved, data]
-    });
+    const { saved } = this.state;
+
+    // Check if property exists in saved state
+    if (!saved.includes(data)) {
+      // Add property to saved state
+      this.setState({
+        saved: [...saved, data]
+      });
+    }
   }
 
   handleRemoveProperty(data, type) {

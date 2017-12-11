@@ -12,12 +12,18 @@ class App extends Component {
       results,
       saved
     }
+
+    this.handleAddProperty = this.handleAddProperty.bind(this);
+  }
+
+  handleAddProperty(data, type) {
+    console.log('handle click from App', data, type);
   }
 
   render() {
     const resultsCards = this.state.results.map((item) => {
       return (
-        <Card key={item.id} data={item} type={'add'} />
+        <Card key={item.id} data={item} type={'add'} onHandleClick={this.handleAddProperty} />
       );
     });
 

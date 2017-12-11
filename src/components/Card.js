@@ -10,7 +10,7 @@ class Card extends Component {
   }
 
   handleClick() {
-    console.log(this.props.data, this.props.type);
+    this.props.onHandleClick(this.props.data, this.props.type);
   }
 
   render() {

@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import Button from '../components/Button';
 
 class Card extends Component {
+  constructor(props) {
+    super(props);
+
+    // Bind click with this
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    console.log(this.props.data, this.props.type);
+  }
+
   render() {
     const { agency, mainImage, price } = this.props.data;
     const { type } = this.props;
@@ -18,7 +29,7 @@ class Card extends Component {
           <p>Price: {price}</p>
         </footer>
         <div className="card__overlay">
-          <Button type={type} />
+          <Button type={type} onClick={this.handleClick} />
         </div>
       </div>
     );

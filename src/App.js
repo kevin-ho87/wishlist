@@ -18,11 +18,14 @@ class App extends Component {
   }
 
   handleAddProperty(data, type) {
-    console.log('handle click from App, to add', data, type);
+    // console.log('handle click from App, to add', data, type);
+    this.setState({
+      saved: [...this.state.saved, data]
+    });
   }
 
   handleRemoveProperty(data, type) {
-    console.log('handle click from App, to remove', data, type);
+    // console.log('handle click from App, to remove', data, type);
   }
 
   render() {

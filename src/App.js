@@ -14,10 +14,15 @@ class App extends Component {
     }
 
     this.handleAddProperty = this.handleAddProperty.bind(this);
+    this.handleRemoveProperty = this.handleRemoveProperty.bind(this);
   }
 
   handleAddProperty(data, type) {
-    console.log('handle click from App', data, type);
+    console.log('handle click from App, to add', data, type);
+  }
+
+  handleRemoveProperty(data, type) {
+    console.log('handle click from App, to remove', data, type);
   }
 
   render() {
@@ -29,7 +34,7 @@ class App extends Component {
 
     const savedCards = this.state.saved.map((item) => {
       return (
-        <Card key={item.id} data={item} type={'remove'} />
+        <Card key={item.id} data={item} type={'remove'} onHandleClick={this.handleRemoveProperty} />
       );
     });
 

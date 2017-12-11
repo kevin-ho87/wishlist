@@ -30,7 +30,13 @@ class App extends Component {
   }
 
   handleRemoveProperty(data, type) {
-    // console.log('handle click from App, to remove', data, type);
+    const filtered = this.state.saved.filter((item) => {
+      return item !== data;
+    });
+
+    this.setState({
+      saved: filtered
+    });
   }
 
   render() {

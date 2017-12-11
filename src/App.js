@@ -17,7 +17,7 @@ class App extends Component {
     this.handleRemoveProperty = this.handleRemoveProperty.bind(this);
   }
 
-  handleAddProperty(data, type) {
+  handleAddProperty(data) {
     const { saved } = this.state;
 
     // Check if property exists in saved state
@@ -29,7 +29,7 @@ class App extends Component {
     }
   }
 
-  handleRemoveProperty(data, type) {
+  handleRemoveProperty(data) {
     const filtered = this.state.saved.filter((item) => {
       return item !== data;
     });

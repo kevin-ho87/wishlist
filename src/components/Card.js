@@ -15,7 +15,7 @@ class Card extends Component {
 
   render() {
     const { agency, mainImage, price } = this.props.data;
-    const { type } = this.props;
+    const { type, isButtonDisabled } = this.props;
 
     return (
       <div className="card">
@@ -29,7 +29,7 @@ class Card extends Component {
           <p>Price: {price}</p>
         </footer>
         <div className="card__overlay">
-          <Button type={type} onClick={this.handleClick} />
+          <Button type={type} disableButton={isButtonDisabled} onClick={this.handleClick} />
         </div>
       </div>
     );

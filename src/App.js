@@ -41,14 +41,23 @@ class App extends Component {
 
   render() {
     const resultsCards = this.state.results.map((item) => {
+      let existsInSaved = this.state.saved.includes(item);
       return (
-        <Card key={item.id} data={item} type={'add'} onHandleClick={this.handleAddProperty} />
+        <Card key={item.id}
+          data={item}
+          type={'add'}
+          isButtonDisabled={existsInSaved}
+          onHandleClick={this.handleAddProperty} />
       );
     });
 
     const savedCards = this.state.saved.map((item) => {
       return (
-        <Card key={item.id} data={item} type={'remove'} onHandleClick={this.handleRemoveProperty} />
+        <Card key={item.id}
+          data={item}
+          type={'remove'}
+          isButtonDisabled={false}
+          onHandleClick={this.handleRemoveProperty} />
       );
     });
 

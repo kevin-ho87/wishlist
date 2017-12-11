@@ -96,3 +96,8 @@ img {
 .btn_remove:hover {
   background-color: #e50000;
 }
+
+.btn[disabled] {
+  background-color: #eee;
+  opacity: .5;
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Button extends Component {
   render() {
-    const { type } = this.props;
+    const { type, disableButton } = this.props;
 
     let buttonClass = '';
     let buttonText = '';
@@ -16,7 +16,11 @@ class Button extends Component {
     }
 
     return (
-      <button className={`btn ${buttonClass}`} type="button" onClick={this.props.onClick}>
+      <button
+        className={`btn ${buttonClass}`}
+        type="button"
+        disabled={disableButton}
+        onClick={this.props.onClick}>
         {buttonText}
       </button>
     );

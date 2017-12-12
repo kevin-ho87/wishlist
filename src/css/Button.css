@@ -1,0 +1,31 @@
+/* Button */
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  border: 0;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.btn_add {
+  background-color: #32cd32;
+}
+
+.btn_add:hover {
+  background-color: #40e240;
+}
+
+.btn_remove {
+  background-color: #f00;
+  color: #fff;
+}
+
+.btn_remove:hover {
+  background-color: #e50000;
+}
+
+.btn[disabled] {
+  background-color: #eee;
+  opacity: .5;
+}

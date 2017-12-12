@@ -1,0 +1,40 @@
+
+/* Card */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  overflow: hidden;
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.card__header {
+  padding: .5rem 1rem;
+}
+
+.card__footer {
+  padding: 0 1rem;
+}
+
+.card__overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .3s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  opacity: 1;
+}

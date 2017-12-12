@@ -1,31 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../css/Button.css';
 
-class Button extends Component {
-  render() {
-    const { type, disableButton } = this.props;
+const Button = ({type, disableButton, onClick}) => {
+  let buttonClass = '';
+  let buttonText = '';
 
-    let buttonClass = '';
-    let buttonText = '';
-
-    if (type === 'add') {
-      buttonClass = 'btn_add';
-      buttonText = 'Add property';
-    } else if (type === 'remove') {
-      buttonClass = 'btn_remove';
-      buttonText = 'Remove property';
-    }
-
-    return (
-      <button
-        className={`btn ${buttonClass}`}
-        type="button"
-        disabled={disableButton}
-        onClick={this.props.onClick}>
-        {buttonText}
-      </button>
-    );
+  if (type === 'add') {
+    buttonClass = 'btn_add';
+    buttonText = 'Add property';
+  } else if (type === 'remove') {
+    buttonClass = 'btn_remove';
+    buttonText = 'Remove property';
   }
+
+  return (
+    <button
+      className={`btn ${buttonClass}`}
+      type="button"
+      disabled={disableButton}
+      onClick={onClick}>
+      {buttonText}
+    </button>
+  );
 }
 
 export default Button;

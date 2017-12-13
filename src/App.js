@@ -62,17 +62,25 @@ class App extends Component {
     });
 
     return (
-      <div className="container">
-        <div className="col">
-          <h3>Results</h3>
-          <div className="cards-holder">
-            { resultsCards }
+      <div className="holder">
+        <div className="container">
+          <div className="col">
+            <h1>Wishlist</h1>
+            <p>Welcome to my wishlist app. Click "add property" button in the cards under "results" column to save your desired property. Click "remove property" button in the cards under "saved properties" column to remove saved cards.</p>
           </div>
         </div>
-        <div className="col">
-          <h3>Saved Properties</h3>
-          <div className="cards-holder">
-            { savedCards }
+        <div className="container">
+          <div className="col col-cards">
+            <h3>Results</h3>
+            <div className="cards-holder">
+              { resultsCards }
+            </div>
+          </div>
+          <div className="col col-cards">
+            <h3>Saved Properties</h3>
+            <div className="cards-holder">
+              { savedCards }
+            </div>
           </div>
         </div>
       </div>

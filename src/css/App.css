@@ -2,6 +2,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
+  background-color: #fff;
 }
 
 img {
@@ -11,21 +13,36 @@ img {
 }
 
 /* Structure */
+.holder {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .container {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  max-width: 1200px;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .col {
-  max-width: 50%;
-  flex: 0 0 50%;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .col-cards {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
 }
 
 .cards-holder {
   padding: 1rem;
-  border: 1px solid #b8b8b8;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -1,16 +1,14 @@
-
 /* Card */
 .card {
   position: relative;
-  width: 100%;
-  max-width: 320px;
+  max-width: 200px;
+  flex: 0 1 200px;
   overflow: hidden;
-  border: 1px solid #b8b8b8;
+  background-color: #fff;
   border-radius: 5px;
-}
-
-.card:not(:last-child) {
   margin-bottom: 1rem;
+  margin-left: .3rem;
+  margin-right: .3rem;
 }
 
 .card__header {

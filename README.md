@@ -9,7 +9,7 @@ There are a few requirements to install and run this project:
 ## Installation
 To install packages, run:
 
-### `npm` or `yarn`
+### `npm install` or `yarn`
 
 ## Scripts
 To run the app in development mode viewable at [http://localhost:3000](http://localhost:3000), run:
